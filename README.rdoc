@@ -1,4 +1,4 @@
-To get this project up and runnig please launch the following commands
+To get this project up and runnig please launch the following commands:
 
 $ bundle install
 
