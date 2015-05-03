@@ -1,0 +1,20 @@
+<%= form_for @article, :as => :article, :url => update_path, :method => :post do |f| %>
+
+<%= f.hidden_field :id, :value =>  @article.id %>
+
+<table>
+	<tr>
+		<td><%= f.label 'Title' %></td><td><%= f.text_field :title, :style=>'width: 600px;' %></td>
+	</tr>
+	<tr>
+		<td valign="top"><%= f.label 'Content' %></td><td><%= f.text_area :content, :style=>'width:1200px;height:400px' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td align="right"><%= f.submit 'Save' %></td>
+	</tr>
+</tr>
+<% end %>
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SignupFromScratch</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<h1 align="right">Home made Rails Authentication</h1>
+	<div style="text-align:right">
+<% if not session[:user_id]%>
+	<%= link_to "Signup", "/user/signup" %> or <%= link_to "Signin", "/user/signin" %> | <%= link_to "Home", :root %>
+<% else %>
+		<span style="color:green;">you are logged in as <%= session[:user_id] %></span> <%= link_to "Signout", "/user/signout" %> | <%= link_to "Home", :root %>
+<% end %>
+	</div>
+
+	<%= yield %>
+</body>
+</html>

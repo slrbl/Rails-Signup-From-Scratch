@@ -1,0 +1,33 @@
+<h1>User#signin</h1>
+<p>Find me in app/views/user/signin.html.erb</p>
+
+
+<%= form_for @user, :as => :user, :url => new_session_path, :method => :post do |f| %>
+
+
+<%= flash[:notice_signup] %>
+
+<% if flash[:notice] %>
+<span style="color:red"><%= flash[:notice]%></span> or <%=link_to 'Signup', '/user/signup'%>
+<% end %>
+
+<% if flash[:signin_required_notice] %>
+<span style="color:red"><%= flash[:signin_required_notice] %></span>
+<% end %>
+
+<table>
+	<tr>
+		<td><%= f.label 'Email' %></td>
+		<td><%= f.text_field :email, :style=>'width: 200px;' %></td>
+	</tr>
+	<tr>
+		<td><%= f.label 'Password' %></td>
+		<td><%= f.password_field :password, :style=>'width: 200px;' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td align="right"><%= f.submit 'Logon' %></td>
+	</tr>
+</table>
+	
+<% end %>

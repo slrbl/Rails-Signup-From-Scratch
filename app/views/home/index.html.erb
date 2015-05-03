@@ -1,0 +1,41 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+
+<%= render 'menu' %>
+
+<% if @article.size.to_i > 0 %>
+<h2>All articles</h2>
+
+<% @article.each do |article| %>
+<hr width="90%" align="left">
+<h3><%= article.title %></h3>
+
+	<p>
+		<%= article.content %>
+	</p>
+<div align="right">
+<span style="color:black; font-size:11px;">Written by 
+<% if article.user_id %>
+<b><%=  User.find(article.user_id).username %></b>
+| Created <%=  article.created_at %> | Last update <%= article.updated_at %>
+
+
+<% if User.find(article.user_id).email== session[:user_id] %>
+<%=link_to "Edit", edit_path(:article_id => article.id) %>
+
+
+<%=link_to "Delete", delete_article_path(:article_id => article.id), :method => :delete %>
+
+<% end %>
+
+
+<%else%>
+UNKNOWN
+<%end%>
+</span>
+</div>
+<% end %>
+<%else %>
+<p>No articles have yet been added.</p>
+<% end %>

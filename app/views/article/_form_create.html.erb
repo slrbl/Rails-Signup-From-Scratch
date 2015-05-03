@@ -1,0 +1,18 @@
+<%= form_for @article, :as => :article, :url => create_path, :method => :post do |f| %>
+
+<table>
+	<tr>
+		<td><%= f.label 'Title' %></td><td><%= f.text_field :title, :style=>'width: 300px;' %></td>
+	</tr>
+	<tr>
+		<td valign="top"><%= f.label 'Content' %></td><td><%= f.text_area :content, :style=>'width:900px;height:200px' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td align="right"><%= f.submit 'Save' %></td>
+	</tr>
+</tr>
+<% end %>
+
+
+
