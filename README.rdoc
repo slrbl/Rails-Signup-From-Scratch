@@ -1,7 +1,10 @@
 This project is a basic implementation of a user authentication in ruby on rails. 
 Once signed up, a user can create article and modify them.
+- Data model
 
-To get this project up and runnig please launch the following commands:
+User --------------* Artticle
+
+- To get this project up and runnig please launch the following commands:
 
 $ bundle install
 
