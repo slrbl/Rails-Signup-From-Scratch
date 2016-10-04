@@ -6,7 +6,7 @@ User --------------* Artticle
 
 - Ready to get this up and running ? launch the following ;)
 
-[slrbl@myMac ~]# git clone https://www.github.com/slrbl/RailsSignupFromScratch.git ./RailsSignupFromScratch
+[slrbl@myMac ~]# git clone https://github.com/slrbl/RailsSignupFromScratch.git ./RailsSignupFromScratch
 
 [slrbl@myMac ~]# RailsSignupFromScratch
 
