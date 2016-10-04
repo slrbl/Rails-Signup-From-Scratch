@@ -6,10 +6,10 @@ User --------------* Artticle
 
 - Ready to get this up and running ? launch the following ;)
 
-$ git clone https://github.com/slrbl/RailsSignupFromScratch.git ./RailsSignupFromScratch
+[slrbl@myMac ~]# git clone https://github.com/slrbl/RailsSignupFromScratch.git ./RailsSignupFromScratch
 
-$ cd RailsSignupFromScratch
+[slrbl@myMac ~]# RailsSignupFromScratch
 
-$ bundle install
+[slrbl@myMac ~]# bundle install
 
-$ rails s
+[slrbl@myMac ~]# rails s
