@@ -1,5 +1,5 @@
 This project is a basic implementation of a user authentication in ruby on rails. 
-Once signed up, a user can create article and modify them.
+Once signed up, a user can create articles and modify them.
 - Data model
 
 User --------------* Artticle
